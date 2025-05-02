@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="ttm_web_systray.list">
+      <field name="name">ttm_web_systray list</field>
+      <field name="model">ttm_web_systray.ttm_web_systray</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ttm_web_systray.action_window">
+      <field name="name">ttm_web_systray window</field>
+      <field name="res_model">ttm_web_systray.ttm_web_systray</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ttm_web_systray.action_server">
+      <field name="name">ttm_web_systray server</field>
+      <field name="model_id" ref="model_ttm_web_systray_ttm_web_systray"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="ttm_web_systray" id="ttm_web_systray.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ttm_web_systray.menu_1" parent="ttm_web_systray.menu_root"/>
+    <menuitem name="Menu 2" id="ttm_web_systray.menu_2" parent="ttm_web_systray.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ttm_web_systray.menu_1_list" parent="ttm_web_systray.menu_1"
+              action="ttm_web_systray.action_window"/>
+    <menuitem name="Server to list" id="ttm_web_systray" parent="ttm_web_systray.menu_2"
+              action="ttm_web_systray.action_server"/>
+-->
+  </data>
+</odoo>
